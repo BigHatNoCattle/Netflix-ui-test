@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+ *, html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+ }
+ 
+ .App {
+   background: #141414;
+   height: auto;
+   min-width: 100%;
+   position: relative;
+   font-family: Helvetica, sans-serif;
+   color: #e5e5e5;
+   overflow: hidden;
+ }
+ 
+ .App-header {
+   width: 100%;
+   height: 25vh;
+ }
+ 
+ @media screen and (min-width: 400px) {
+   .App-header {
+     height: 30vh;
+   }
+ }
+ 
+ @media screen and (min-width: 768px) {
+   .App-header {
+     height: 450px;
+   }
+ }
+ 
+ .hero-image__static {
+   background-image: url("https://occ-0-33-37.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQo6rOyjO-dr-Et5V-UWoidJSasiMMILZlThEB24A6lIHxHoDKUW3prdqHnYXwlStDja1pyvc_dNjhXjkBY6bccGQJeo.jpg?r=607");
+   background-color: #cccccc;
+   height: 28vh;
+   background-position: center top;
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+ }
+ 
+ @media screen and (min-width: 400px) {
+   .hero-image__static {
+     height: 35vh;
+   }
+ }
+ 
+ @media screen and (min-width: 768px) {
+   .hero-image__static {
+     height: 500px;
+     background-position: center;
+   }
+ }
+ 
+ @media screen and (min-width: 940px) {
+   .hero-image__static {
+     background-position: center right;
+   }
+ }
+ 
+ .titles-grid {
+   height: 100vh;
+   width: 100%;
+   padding-left: 2em;
+ }
+ 
+ .titles-row {
+   height: auto;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .titles-row h1 {
+   font-size: 14px;
+   margin-bottom: 0.2em;
+ }
+ 
+ @media screen and (min-width: 400px) {
+   .titles-row h1 {
+     font-size: 16px;
+     margin-bottom: 0.5em;
+   }
+ }
+ 
+ @media screen and (min-width: 768px) {
+   .titles-row h1 {
+     font-size: 18px;
+   }
+ }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ @media screen and (min-width: 940px) {
+   .titles-row h1 {
+     font-size: 20px;
+   }
+ }
+ 
+ .titles-container {
+   height: auto;
+   width: 100%;
+   overflow-x: scroll;
+   display: flex;
+   flex-direction: wrap;
+   align-items: flex-start;
+   margin-bottom: 0.75em;
+  }
+  
+  @media screen and (min-width: 940px) {
+    .titles-container {
+      margin-bottom: 1em;
+    }
+  }
+ 
+ 
+ .title {
+   display: flex;
+   flex-direction: column;
+   height: 120px;
+   width: 155px;
+   margin-right: 3px;
+ }
+ 
+ @media only screen and (min-width: 400px) {
+   .title {
+     height: 177px;
+     width: 230px;
+     margin-right: 5px;
+   }
+ }
+
+ @media only screen and (min-width: 940px) {
+  .title {
+    height: 195px;
+    width: 260px;
   }
 }
+ 
+ .title input {
+   margin: 0.1em;
+   margin-bottom: 0.2em;
+   background: transparent;
+   border: none;
+   color: #e5e5e5;
+   padding: 2px;
+   height: 1.8em;
+   width: 12em;
+   outline: none;
+   font-size: 11px;
+   caret-color: yellow;
+ }
+ 
+ .title input:hover {
+   border-bottom: 1px solid yellow;
+   border-left: 1px solid yellow;
+ }
+ 
+ .title input::placeholder {
+   color: #e5e5e5;
+   opacity: 1;
+   font-size: 11px;
+ }
+ 
+ @media screen and (min-width: 400px) {
+   .title input {
+     font-size: 12px;
+   }
+ 
+   .title input::placeholder {
+     font-size: 12px;
+   }
+ }
+ 
+ @media screen and (min-width: 768px) {
+   .title input {
+     font-size: 15px;
+   }
+ 
+   .title input::placeholder {
+     font-size: 15px;
+   }
+ }
+ 
+ .title img {
+   height: 87px;
+   width: 155px;
+   object-fit: cover;
+   border-radius: 6px;
+ }
+ 
+ @media only screen and (min-width: 400px) {
+   .title img {
+     height: 130px;
+     width: 230px;
+     border-radius: 8px; 
+   }
+ }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ @media only screen and (min-width: 940px) {
+   .title img {
+     height: 145px;
+     width: 260px;
+   }
+ }
